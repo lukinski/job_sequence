@@ -1,4 +1,4 @@
-# Dependent jobs sequence finder
+== Dependent jobs sequence finder
 
 Simple Ruby on Rails demo application, showing way of solving dependent jobs problem, with finding proper sequence for completing all of the given jobs.
 It performs topological sorting by using Ruby's TSort library, which is common approach in resolving dependency-related problems and sequencing/ordering dependent entities.
