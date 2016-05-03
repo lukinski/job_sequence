@@ -1,0 +1,2 @@
+class DependencyError < StandardError
+end
