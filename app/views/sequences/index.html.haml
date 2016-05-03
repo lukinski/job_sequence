@@ -1,2 +1,11 @@
 %div.row
-  %h1 Job sequence sort
+  %h2.header Job sequence finder
+  %div.card-panel
+    = form_tag('/sequences', remote: true, id: :job_form) do
+      %div.input-field
+        = label_tag(:job_input, 'Enter Job queue')
+        = text_area_tag(:job_input, nil, size: "24x16", class: 'materialize-textarea')
+        = submit_tag('Find sequence', class: 'btn')
+  %div.card
+    %div.card-panel.green.lighten-3.center-align{id: :sequence_result}
+    %div.card-panel.red.accent-4.white-text{id: :sequence_error}

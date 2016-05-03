@@ -13,6 +13,6 @@ class Job
   private
 
   def check_dependency
-    errors.add(:dependency, "can’t depend on itself") if dependency == name
+    errors.add(:dependency, "can’t be the same as Job") if dependency == name
   end
 end

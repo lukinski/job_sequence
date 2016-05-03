@@ -35,7 +35,7 @@ RSpec.describe 'JobProcessor' do
     context 'raises' do
       it 'JobParseError for self-dependency' do
         input = "A=>\r\nB=>\r\nC=>C"
-        expect{JobProcessor.new(input).find_sequence}.to raise_error(JobParseError, /can\’t depend on itself/)
+        expect{JobProcessor.new(input).find_sequence}.to raise_error(JobParseError, /can\’t be the same as Job/)
       end
 
       it 'JobProcessorError for circular dependencies' do

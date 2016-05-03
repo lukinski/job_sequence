@@ -24,7 +24,7 @@ RSpec.describe Job, type: :model do
       expect(job.errors.messages[:name]).to_not be_empty
     end
 
-    it 'can\'t depend on itself' do
+    it 'can\'t be the same as Job' do
       job.dependency = job.name
       job.valid?
       expect(job.errors.messages[:dependency]).to_not be_empty
