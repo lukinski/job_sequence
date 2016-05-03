@@ -26,6 +26,11 @@ RSpec.describe 'JobProcessor' do
         expect(JobProcessor.new(input).find_sequence).to eq('ACB')
       end
 
+      it 'result with spaces properly handled' do
+        input = "A =>\r\nB => C\r\nC =>"
+        expect(JobProcessor.new(input).find_sequence).to eq('ACB')
+      end
+
       it 'proper result with multiple dependencies' do
         input = "A=>\r\nB=>C\r\nC=>F\r\nD=>A\r\nE=>B\r\nF=>"
         expect(JobProcessor.new(input).find_sequence).to eq('AFCBDE')

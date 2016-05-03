@@ -12,7 +12,7 @@ class InputParser
   private
 
   def parse_line(line)
-    name, dependency = line.chomp.split(@separator).map { |c| c.blank? ? nil : c }
+    name, dependency = line.gsub(/\s+/, '').split(@separator).map { |c| c.blank? ? nil : c }
     add_job(name, dependency)
   end
 
