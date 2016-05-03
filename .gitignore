@@ -5,3 +5,4 @@
 /tmp
 
 .ruby-*
+.DS_Store

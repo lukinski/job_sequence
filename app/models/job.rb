@@ -6,6 +6,10 @@ class Job
 
   attr_accessor :name, :dependency
 
+  def initialize(name, dependency = nil)
+    @name, @dependency = name, dependency
+  end
+
   private
 
   def check_dependency

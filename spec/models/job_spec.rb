@@ -2,12 +2,20 @@ require 'rails_helper'
 
 RSpec.describe Job, type: :model do
   context ':new object' do
-    let(:job) { Job.new }
+    let(:job) { Job.new('A') }
 
     it 'responds to all necessary attributes' do
       %w[name dependency].each do |attr|
         expect(job).to respond_to(attr)
       end
+    end
+
+    it 'can set :name on initialize' do
+      expect(job.name).to eq('A')
+    end
+
+    it 'can set :dependency on initialize' do
+      expect(Job.new('A', 'B').dependency).to eq('B')
     end
 
     it 'is invalid without name' do
