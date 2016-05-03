@@ -1,5 +1,4 @@
 %div.row
-  %h2.header Job sequence finder
   %div.card-panel
     = form_tag('/sequences', remote: true, id: :job_form) do
       %div.input-field
@@ -8,4 +7,4 @@
         = submit_tag('Find sequence', class: 'btn')
   %div.card
     %div.card-panel.green.lighten-3.center-align{id: :sequence_result}
-    %div.card-panel.red.accent-4.white-text{id: :sequence_error}
+    %div.card-panel.red.accent-1.white-text{id: :sequence_error}
