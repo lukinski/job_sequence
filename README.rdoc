@@ -1,28 +1,10 @@
-== README
+# Dependent jobs sequence finder
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple Ruby on Rails demo application, showing way of solving dependent jobs problem, with finding proper sequence for completing all of the given jobs.
+It performs topological sorting by using Ruby's TSort library, which is common approach in resolving dependency-related problems and sequencing/ordering dependent entities.
 
-Things you may want to cover:
+Handy links:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  - https://en.wikipedia.org/wiki/Topological_sorting
+  - http://ruby-doc.org/stdlib-2.3.1/libdoc/tsort/rdoc/TSort.html
+  - http://blog.bigbinary.com/2012/03/16/tsort-in-ruby.html
