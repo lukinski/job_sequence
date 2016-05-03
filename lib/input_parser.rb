@@ -20,7 +20,10 @@ class InputParser
 
   def add_job(name, dependency)
     job = Job.new(name, dependency)
-    raise DependencyError, job.errors.full_messages.first if job.invalid?
+    raise JobParseError, job.errors.full_messages.first if job.invalid?
     @jobs << job
   end
+end
+
+class JobParseError < StandardError
 end

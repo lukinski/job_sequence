@@ -31,7 +31,7 @@ RSpec.describe 'InputParser' do
     end
 
     it 'raises error on self-dependency' do
-      expect{parser.parse("A=>A")}.to raise_error(DependencyError)
+      expect{parser.parse("A=>A")}.to raise_error(JobParseError)
     end
   end
 end
