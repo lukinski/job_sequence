@@ -10,7 +10,7 @@ class JobContainer
   alias_method :sequence, :tsort
 
   def add(name, dependency = [])
-    @jobs[name] = dependency.is_a?(Array) ? dependency : [dependency]
+    @jobs[name] = dependency.blank? ? [] : [dependency]
   end
 
   def tsort_each_node(&block)

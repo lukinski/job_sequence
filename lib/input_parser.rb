@@ -1,5 +1,3 @@
-require 'dependency_error'
-
 class InputParser
   def initialize(separator = '=>')
     @separator = separator
